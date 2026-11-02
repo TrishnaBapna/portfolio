@@ -16,47 +16,63 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   };
 
   return (
-    <div className="glass-card rounded-2xl overflow-hidden border border-white/10 glass-card-hover flex flex-col">
-      {/* Visual Screenshot / Interactive Mockup Preview */}
-      <div className="relative w-full h-64 sm:h-72 bg-void-950 overflow-hidden border-b border-white/10 group">
-        <img
-          src={project.image}
-          alt={`${project.title} screenshot preview`}
-          className="w-full h-full object-cover object-top filter brightness-95 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-void-950 via-void-950/20 to-transparent" />
-
-        {/* Top Floating Badges */}
-        <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2 pointer-events-none">
-          <span className="px-3 py-1 rounded-full text-xs font-mono font-medium bg-void-950/80 backdrop-blur-md text-lavender-300 border border-white/10 shadow-md">
+    <div className="glass-card rounded-2xl overflow-hidden border border-white/10 glass-card-hover flex flex-col justify-between">
+      
+      {/* 1. Project Header (Cleanly separated above the image - ZERO OVERLAP) */}
+      <div className="p-6 pb-4 border-b border-white/5 space-y-3">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <span className="px-3 py-1 rounded-full text-xs font-mono font-medium bg-lavender-500/10 text-lavender-300 border border-lavender-500/20">
             {project.category}
           </span>
-          <span className={`px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-md border shadow-md flex items-center gap-1.5 ${statusBadgeStyles[project.statusColor]}`}>
+          <span className={`px-3 py-1 rounded-full text-xs font-semibold border flex items-center gap-1.5 ${statusBadgeStyles[project.statusColor]}`}>
             <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
             {project.status}
           </span>
         </div>
 
-        {/* Bottom Title Bar over image */}
-        <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
-          <div>
-            <h3 className="text-2xl font-bold text-white tracking-tight drop-shadow-md">
-              {project.title}
-            </h3>
-            <p className="text-xs text-slate-300 line-clamp-1 drop-shadow">
-              {project.tagline}
-            </p>
+        <div>
+          <h3 className="text-2xl font-bold text-white tracking-tight">
+            {project.title}
+          </h3>
+          <p className="text-xs text-slate-300 mt-1 line-clamp-2">
+            {project.tagline}
+          </p>
+        </div>
+      </div>
+
+      {/* 2. Actual Application Screenshot in Browser Mockup Frame (100% Unobstructed) */}
+      <div className="px-6 pt-4">
+        <div className="rounded-xl overflow-hidden border border-white/10 bg-void-950 shadow-inner group">
+          {/* Subtle browser window toolbar */}
+          <div className="px-3 py-2 bg-void-900 border-b border-white/5 flex items-center justify-between">
+            <div className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
+              <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
+              <span className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
+            </div>
+            <span className="text-[11px] font-mono text-slate-500 truncate max-w-[200px]">
+              {project.liveUrl ? project.liveUrl.replace('https://', '') : project.githubUrl.replace('https://', '')}
+            </span>
+            <div className="w-8" />
+          </div>
+
+          {/* Screenshot image container */}
+          <div className="relative w-full aspect-[16/9] bg-void-950 overflow-hidden">
+            <img
+              src={project.image}
+              alt={`${project.title} actual application screenshot`}
+              className="w-full h-full object-cover object-top filter brightness-95 group-hover:brightness-100 group-hover:scale-[1.02] transition-all duration-500"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
 
-      {/* Card Body */}
-      <div className="p-6 flex-1 flex flex-col justify-between space-y-6">
+      {/* 3. Interactive Information Tabs */}
+      <div className="p-6 pt-5 flex-1 flex flex-col justify-between space-y-5">
         
-        {/* Sub-navigation tabs */}
         <div>
-          <div className="flex border-b border-white/10 gap-2 mb-4 text-xs font-medium">
+          <div className="flex border-b border-white/10 gap-3 mb-4 text-xs font-medium">
             <button
               onClick={() => setActiveTab('overview')}
               className={`pb-2 transition-all relative ${
@@ -92,13 +108,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {/* Tab Content: Overview */}
           {activeTab === 'overview' && (
             <div className="space-y-4 animate-fade-in text-sm">
-              <p className="text-slate-300 leading-relaxed">
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                 {project.description}
               </p>
               
-              <div className="space-y-2">
+              <div className="space-y-1.5">
                 <span className="text-xs font-mono uppercase tracking-wider text-slate-400 block font-semibold">Key Highlights:</span>
-                <ul className="space-y-1.5 text-xs text-slate-300">
+                <ul className="space-y-1 text-xs text-slate-300">
                   {project.keyFeatures.slice(0, 3).map((feat, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircleIcon size={14} className="text-lavender-400 shrink-0 mt-0.5" />
@@ -112,7 +128,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
           {/* Tab Content: Features */}
           {activeTab === 'features' && (
-            <div className="space-y-2.5 animate-fade-in text-xs">
+            <div className="space-y-2 animate-fade-in text-xs max-h-56 overflow-y-auto pr-1">
               <ul className="space-y-2 text-slate-300">
                 {project.keyFeatures.map((feat, i) => (
                   <li key={i} className="p-2.5 rounded-lg bg-white/[0.02] border border-white/5 flex items-start gap-2.5">
@@ -153,7 +169,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           )}
         </div>
 
-        {/* Footer Links & CTAs */}
+        {/* 4. Action Buttons (Live Demo & GitHub) */}
         <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             {project.liveUrl && (

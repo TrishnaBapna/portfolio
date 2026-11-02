@@ -171,7 +171,7 @@ const resumeHtml = `
   <div style="margin-bottom: 10px;">
     <div class="item-header">
       <span class="item-title">FOCUSMATE <span style="font-weight: 400; color: #64748b;">| Student Productivity / EdTech</span></span>
-      <span class="item-date"><a href="https://focus-mate-seven.vercel.app" style="color: #4338ca; text-decoration: none;">Live Demo</a> &bull; Active Development</span>
+      <span class="item-date"><a href="https://focus-mate-a29f8.web.app/" style="color: #4338ca; text-decoration: none;">Live Demo</a> &bull; Active Development</span>
     </div>
     <ul>
       <li>Student productivity application built with an AI-assisted coding workflow using React, TypeScript, Firebase and Firestore.</li>

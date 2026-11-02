@@ -57,7 +57,7 @@ export const projects: Project[] = [
     featured: true,
     image: "/images/focusmate_preview.png",
     githubUrl: "https://github.com/TrishnaBapna/focus-mate",
-    liveUrl: "https://focus-mate-seven.vercel.app",
+    liveUrl: "https://focus-mate-a29f8.web.app/",
     techStack: ["React", "TypeScript", "Tailwind CSS", "Firebase", "Cloud Firestore", "Vite"],
     keyFeatures: [
       "Dual Focus Timer: Integrated Pomodoro technique and continuous stopwatch with automatic session logging and daily analytics.",

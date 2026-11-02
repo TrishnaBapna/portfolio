@@ -94,45 +94,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
 
           </div>
 
-          {/* Right Column: Hero Portrait Frame (5 cols) */}
-          <div className="lg:col-span-5 flex justify-center">
+          {/* Right Column: Hero Portrait Frame (5 cols) - ZERO OVERLAPPING */}
+          <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative group">
               
-              {/* Outer decorative glow ring */}
-              <div className="absolute -inset-1.5 bg-gradient-to-tr from-purple-600 to-lavender-400 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition duration-700 animate-pulse-subtle" />
+              {/* Outer decorative ambient glow */}
+              <div className="absolute -inset-2 bg-gradient-to-tr from-purple-600/30 via-lavender-500/20 to-indigo-600/20 rounded-[32px] blur-xl opacity-50 group-hover:opacity-75 transition duration-700 animate-pulse-subtle" />
 
-              {/* Portrait Container */}
-              <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden glass-card p-2 border border-white/10">
-                <div className="w-full h-full rounded-xl overflow-hidden relative bg-void-900">
+              {/* Portrait Card Frame */}
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-[28px] p-2 bg-gradient-to-b from-lavender-400/30 via-white/5 to-white/10 border border-white/15 backdrop-blur-xl shadow-2xl">
+                <div className="w-full h-full rounded-[22px] overflow-hidden bg-void-900">
                   <img
                     src={personalInfo.portraitUrl}
                     alt="Trishna Bapna Portrait"
-                    className="w-full h-full object-cover object-center filter contrast-105 group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover object-top filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                     loading="eager"
                   />
-                  {/* Subtle bottom gradient to blend overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-void-950/80 via-transparent to-transparent opacity-60" />
-                  
-                  {/* Badge over portrait */}
-                  <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-lg bg-void-950/85 backdrop-blur-md border border-white/10 text-center">
-                    <span className="text-xs font-semibold text-white block">Trishna Bapna</span>
-                    <span className="text-[10px] text-lavender-300 font-mono">B.Tech AI &amp; DS &bull; 2026–Present</span>
-                  </div>
                 </div>
               </div>
-
-              {/* Floating micro-card: Projects Highlight */}
-              <div className="absolute -bottom-5 -left-6 sm:-left-8 p-3 rounded-xl bg-void-900/90 border border-white/10 backdrop-blur-xl shadow-xl flex items-center gap-3 animate-float-slow">
-                <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold text-xs">
-                  2+
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-white">Active Projects</div>
-                  <div className="text-[10px] text-slate-400">Saksham 3.0 &bull; FocusMate</div>
-                </div>
-              </div>
-
             </div>
+
+            {/* Clean Info Pill Positioned Neatly Below the Photo (NO OVERLAP) */}
+            <div className="mt-5 flex flex-col sm:flex-row items-center gap-3">
+              <div className="px-4 py-2 rounded-xl bg-void-900/90 border border-white/10 text-center sm:text-left">
+                <span className="text-xs font-bold text-white block">Trishna Bapna</span>
+                <span className="text-[11px] text-lavender-300 font-mono">B.Tech AI &amp; DS &bull; Pillai University</span>
+              </div>
+              
+              <div className="px-3.5 py-2 rounded-xl bg-void-900/90 border border-white/10 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[11px] font-medium text-slate-300">Saksham 3.0 &amp; FocusMate</span>
+              </div>
+            </div>
+
           </div>
 
         </div>
