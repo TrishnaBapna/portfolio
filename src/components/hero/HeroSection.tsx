@@ -25,7 +25,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span>MES Winter Internship Programme 2026 Candidate</span>
+              <span>B.Tech AI &amp; DS Student &bull; Pillai University</span>
             </div>
 
             {/* Main Greeting & Headline */}

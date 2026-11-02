@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenResume }) => {
               First-year B.Tech Student in Artificial Intelligence and Data Science at Pillai University. Actively exploring software engineering, assistive healthcare systems, and student learning tools through AI-augmented workflows.
             </p>
             <p className="text-[11px] text-slate-500 font-mono">
-              Applying for: {personalInfo.internshipTarget}
+              B.Tech – Artificial Intelligence &amp; Data Science &bull; Pillai University
             </p>
           </div>
 

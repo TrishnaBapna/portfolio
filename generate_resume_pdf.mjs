@@ -137,13 +137,9 @@ const resumeHtml = `
     <span><strong>College:</strong> Pillai University, New Panvel</span>
   </div>
 
-  <div class="app-for">
-    <strong>Applying for:</strong> MES Department of Computer Engineering, Winter Internship Programme 2026
-  </div>
-
   <div class="section-title">Professional Summary</div>
   <p style="font-size: 9.5pt; color: #334155; text-align: justify;">
-    First-year B.Tech student in Artificial Intelligence and Data Science, aspiring to work in software engineering, full stack web development, artificial intelligence and generative AI, with a focus on building practical software solutions. Hands-on exposure to AI-assisted software development through two real-world projects in healthcare and educational technology, actively improving programming fundamentals and technical understanding. Seeking a winter internship to learn under structured guidance and strengthen core engineering skills.
+    First-year B.Tech student in Artificial Intelligence and Data Science at Pillai University, aspiring to work in software engineering, full stack web development, artificial intelligence and generative AI, with a focus on building practical software solutions. Hands-on exposure to AI-assisted software development through two real-world projects in healthcare and educational technology, actively improving programming fundamentals and technical understanding. Seeking internship opportunities to learn under structured guidance and strengthen core engineering skills.
   </p>
 
   <div class="section-title">Education</div>

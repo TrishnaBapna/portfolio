@@ -38,7 +38,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             </div>
             <div>
               <h3 className="font-semibold text-slate-100 text-lg">Curriculum Vitae / Resume</h3>
-              <p className="text-xs text-slate-400">Targeting MES Winter Internship Programme 2026</p>
+              <p className="text-xs text-slate-400">Aspiring Software Developer &bull; AI &amp; DS Student</p>
             </div>
           </div>
 
@@ -87,17 +87,13 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               <span>•</span>
               <a href={personalInfo.github} target="_blank" rel="noreferrer" className="text-lavender-300 hover:underline">github.com/TrishnaBapna</a>
             </div>
-
-            <div className="mt-4 p-3 rounded-lg bg-white/[0.03] border border-white/10 text-xs text-slate-300">
-              <strong className="text-lavender-300">Application:</strong> {personalInfo.internshipTarget}
-            </div>
           </div>
 
           {/* Professional Summary */}
           <div>
             <h4 className="text-xs font-mono uppercase tracking-wider text-lavender-400 font-semibold mb-2">Professional Summary</h4>
             <p className="text-slate-300 text-sm text-justify">
-              First-year B.Tech student in Artificial Intelligence and Data Science at Pillai University, aspiring to work in software engineering, full stack web development, artificial intelligence and generative AI, with a focus on building practical software solutions. Hands-on exposure to AI-assisted software development through two real-world projects in healthcare and educational technology, actively improving programming fundamentals and technical understanding. Looking for a winter internship to learn from structured guidance and strengthen core engineering skills.
+              First-year B.Tech student in Artificial Intelligence and Data Science at Pillai University, aspiring to work in software engineering, full stack web development, artificial intelligence and generative AI, with a focus on building practical software solutions. Hands-on exposure to AI-assisted software development through two real-world projects in healthcare and educational technology, actively improving programming fundamentals and technical understanding. Seeking internship opportunities to learn from structured engineering guidance and strengthen core skills.
             </p>
           </div>
 

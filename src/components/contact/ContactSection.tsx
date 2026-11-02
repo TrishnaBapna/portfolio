@@ -36,7 +36,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast, onO
 
       // Open mailto to allow direct delivery as well
       const mailtoUrl = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
-        formState.subject || `Inquiry from ${formState.name} (MES Winter Internship / Portfolio)`
+        formState.subject || `Inquiry from ${formState.name} (Portfolio Contact)`
       )}&body=${encodeURIComponent(
         `Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`
       )}`;
@@ -58,7 +58,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast, onO
             Let's Discuss Opportunities
           </h2>
           <p className="text-slate-400 text-sm max-w-2xl">
-            Currently open for discussions regarding the MES Winter Internship Programme 2026, academic research, and engineering collaborations.
+            Open for technical discussions, student projects, research initiatives, and engineering collaborations.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast, onO
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Get in Touch Directly</h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Whether you are an internship coordinator from the Department of Computer Engineering, a faculty member, or a fellow student, I would love to connect.
+                  Whether you are a developer, recruiter, faculty member, or a fellow student, I would love to connect and talk tech.
                 </p>
               </div>
 
@@ -215,7 +215,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast, onO
                       type="text"
                       value={formState.subject}
                       onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
-                      placeholder="e.g. MES Winter Internship 2026 / Project Discussion"
+                      placeholder="e.g. Project Discussion / Opportunity / Collaboration"
                       className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 focus:border-lavender-400 focus:outline-none text-slate-100 text-xs transition-colors"
                     />
                   </div>

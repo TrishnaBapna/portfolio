@@ -1,8 +1,7 @@
 # Trishna Bapna — Personal Developer Portfolio
 
 > **Aspiring Software Developer | AI & Data Science Student**  
-> Pillai University, New Panvel • Academic Year 2026–27  
-> Prepared for the **MES Department of Computer Engineering, Winter Internship Programme 2026**
+> Pillai University, New Panvel • Academic Year 2026–Present
 
 ---
 

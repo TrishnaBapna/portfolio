@@ -64,7 +64,6 @@ export interface PersonalInfo {
   academicYear: string;
   email: string;
   github: string;
-  internshipTarget: string;
   portraitUrl: string;
   resumePdfUrl: string;
   resumeDocxUrl: string;

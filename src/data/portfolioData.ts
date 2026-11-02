@@ -10,7 +10,6 @@ export const personalInfo: PersonalInfo = {
   academicYear: "2026–27 (First Year)",
   email: "trishna26ai@student.pillai.edu.in",
   github: "https://github.com/TrishnaBapna",
-  internshipTarget: "MES Department of Computer Engineering • Winter Internship Programme 2026",
   portraitUrl: "/images/trishna_portrait.jpg",
   resumePdfUrl: "/documents/Trishna_Bapna_Resume.pdf",
   resumeDocxUrl: "/documents/Trishna_Bapna_Resume.docx"
@@ -142,7 +141,7 @@ export const educationData: Education = {
   specialization: "Artificial Intelligence and Data Science",
   highlights: [
     "Core Coursework: Engineering Mathematics, Programming Fundamentals, Digital Systems, Problem Solving Methodologies.",
-    "Targeting: MES Winter Internship Programme 2026 (Department of Computer Engineering).",
+    "Specialization Focus: Artificial Intelligence, Data Structures, and Applied Machine Learning.",
     "Focus: Practical software development paired with fundamental theoretical mastery."
   ]
 };
@@ -187,7 +186,7 @@ export const learningJourney: JourneyMilestone[] = [
     stage: "04",
     title: "Deepening Independent Proficiency",
     period: "Current Focus (First Year B.Tech)",
-    description: "Actively solidifying independent programming skills, data structures, and backend systems while applying for the MES Winter Internship Programme 2026 to gain structured mentorship.",
+    description: "Actively solidifying independent programming skills, data structures, algorithms, and backend systems through hands-on project engineering and academic coursework.",
     tags: ["B.Tech Coursework", "Data Structures", "Independent Coding", "Backend APIs"],
     status: "current"
   },

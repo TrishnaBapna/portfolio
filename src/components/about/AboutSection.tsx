@@ -55,7 +55,7 @@ export const AboutSection: React.FC = () => {
             <div className="pt-2 flex flex-wrap gap-2 text-xs font-mono text-slate-300">
               <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/5">Pillai University</span>
               <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/5">B.Tech AI &amp; DS</span>
-              <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/5">MES Winter Intern Candidate</span>
+              <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/5">Software Engineering Explorer</span>
               <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/5">Google Antigravity User</span>
             </div>
           </div>
@@ -94,16 +94,16 @@ export const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Bento Card 2: Winter Internship Target */}
+            {/* Bento Card 2: Engineering Aspirations & Focus */}
             <div className="glass-card p-6 rounded-2xl space-y-3 border-l-4 border-l-lavender-400 glass-card-hover">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-lavender-400 font-semibold">Internship Goal</span>
+                <span className="text-xs font-mono uppercase tracking-wider text-lavender-400 font-semibold">Engineering Philosophy</span>
               </div>
               <h4 className="text-base font-bold text-white leading-snug">
-                MES Winter Internship Programme 2026
+                Practical Software &amp; Applied AI Solutions
               </h4>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Applying to the Department of Computer Engineering at Pillai University to work under senior faculty guidance, deepen core algorithms, and contribute to departmental software initiatives.
+                Committed to building accessible applications that address real-world human needs, deepening algorithmic foundations, and exploring modern full-stack web and cloud architectures.
               </p>
             </div>
 

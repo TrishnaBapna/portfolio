@@ -1,5 +1,5 @@
 import React from 'react';
-import { educationData, certifications, personalInfo } from '../../data/portfolioData';
+import { educationData, certifications } from '../../data/portfolioData';
 import { GraduationCapIcon, AwardIcon, CheckCircleIcon, MapPinIcon } from '../ui/Icons';
 
 export const EducationSection: React.FC = () => {
@@ -64,14 +64,14 @@ export const EducationSection: React.FC = () => {
               </ul>
             </div>
 
-            {/* University Internship Spotlight */}
+            {/* Academic Department Focus */}
             <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-between gap-4">
               <div>
-                <span className="text-xs font-mono text-lavender-300 font-semibold block">Internship Focus</span>
-                <span className="text-xs text-slate-200">{personalInfo.internshipTarget}</span>
+                <span className="text-xs font-mono text-lavender-300 font-semibold block">Academic Department</span>
+                <span className="text-xs text-slate-200">Department of Artificial Intelligence &amp; Data Science</span>
               </div>
-              <span className="text-[11px] font-mono px-2 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 whitespace-nowrap">
-                Candidate 2026
+              <span className="text-[11px] font-mono px-2 py-1 rounded bg-lavender-500/10 text-lavender-300 border border-lavender-500/20 whitespace-nowrap">
+                B.Tech 2026–Present
               </span>
             </div>
 
